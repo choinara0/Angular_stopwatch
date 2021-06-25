@@ -9,7 +9,7 @@ export class SectionComponent implements OnInit {
 
   constructor() { }
   present = "welcome";
-
+  commandText : String = "";
   startTime($event: string){
     this.present = $event;
   }

@@ -3,26 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SectionComponent } from './section/section.component';
-import { TimeDisplayComponent } from './section/time-display/time-display.component';
-import { ButtonsComponent } from './section/buttons/buttons.component';
+import { LayoutModule } from './layout/layout.module';
+import { SectionModule } from './section/section.module';
+import { StwatchModule } from './section/stwatch/stwatch.module';
 
 @NgModule({
+  //component의 경우 하나의 module에 속해있어야 사용이 가능하다.
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SectionComponent,
-    TimeDisplayComponent,
-    ButtonsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    SectionModule,
+    StwatchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
